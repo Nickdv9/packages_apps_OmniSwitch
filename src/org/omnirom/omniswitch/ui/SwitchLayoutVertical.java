@@ -704,4 +704,12 @@ public class SwitchLayoutVertical extends AbstractSwitchLayout {
             }
         });
     }
+
+    @Override
+    public void notifiyRecentsListChanged() {
+        if (DEBUG) {
+            Log.d(TAG, "notifiyRecentsListChanged");
+        }
+        mRecentListAdapter.notifyDataSetChanged();
+    }
 }
